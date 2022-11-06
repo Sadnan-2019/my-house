@@ -80,11 +80,13 @@ const Login = () => {
             </div>
             
 
+            <Link to="/dashboard">
             <input
               type="submit"
               className="btn w-full max-w-xs   btn-outline btn-accent "
               value="Login"
             />
+            </Link>
           </form>
           <p>
             <small className="text-primary">
