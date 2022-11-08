@@ -22,7 +22,7 @@ const MyAppoinment = () => {
      return (
       <div>
       <h1 className="text-center my-instrument py-4">My Chart</h1>
-      <div className="flex justify-center items-center  mt-4">
+      <div className="flex justify-center items-center   ">
             
             <div className="">
               <BarChart width={600} height={300} data={datas}>
