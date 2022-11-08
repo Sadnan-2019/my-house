@@ -30,6 +30,7 @@ function App() {
           }
         >
           <Route index element={<MyAppoinment></MyAppoinment>} />
+          <Route path="review" element={<MyAppoinment></MyAppoinment>} />
           {/* <Route path="review" element={<MyReview></MyReview>} />
           <Route path="payment/:id" element={<Payment/>} />
           <Route path="mobile-payment/:id" element={<MobileBanking/>} />
