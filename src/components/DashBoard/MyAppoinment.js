@@ -1,43 +1,64 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import {
+  Area,
+  AreaChart,
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Pie,
+  PieChart,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 const MyAppoinment = () => {
+  const [datas, setDatas] = useState([]);
+  useEffect(() => {
+    fetch(`data.json`)
+      .then((res) => res.json())
+      .then((data) => setDatas(data));
+  }, []);
      return (
-          <div>
-            <div>
-      <h2 className=" text-center  sm:text-4xl lg:text-[43px] md:text-[30px] font-bold text-neutral py-8">
-      Carrer
-
-      </h2>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 px-12 gap-10  items-center justify-items-center">
-        <div>
-          <p className="text-neutral text-1xl p-5">
-            We consider the people of MRG GROUP to be our greatest asset. We
-            serve the needs of our businesses by implementing key hiring
-            processes and creating a performance-driven culture for the group’s
-            companies.
-          </p>
-          <p className="text-neutral text-1xl p-5">
-            We attract, develop and retain talent, ensuring employee inclusion
-            and engagement. Throughout our work, we strive to deliver clear,
-            simple and effective services for the well-being of our people.
-          </p>
-          <p className="text-neutral text-1xl p-5">
-            If you have the expertise and the desire to join MRG GROUP, click
-            the button below for possibilities and opportunities.
-          </p>
-          <div className="py-2 px-5">
-            <button className="btn btn-xs sm:btn-sm md:btn-md mb-4 bg-gradient-to-r from-[#303640] to-[#103264]">
-              Drop your cv
-            </button>
+      <div>
+      <h1 className="text-center my-instrument py-4">My Chart</h1>
+      <div className="flex justify-center items-center  mt-4">
+            
+            <div className="">
+              <BarChart width={600} height={300} data={datas}>
+                <XAxis dataKey="month" tick="investment" />
+                <YAxis  />
+                <Tooltip></Tooltip>
+                <Bar dataKey="sell"   barSize={30} fill="#8884d8" label="investment" />
+              </BarChart>
+            </div>
+             
+      
+            <div className=" ">
+              <PieChart width={400} height={400}>
+                <Pie
+                  data={datas}
+                  dataKey="sell"
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={60}
+                  fill="#8884d8"
+                />
+                <Pie
+                  data={datas}
+                  dataKey="investment"
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={70}
+                  outerRadius={90}
+                  fill="#82ca9d"
+                  label
+                />
+                <Tooltip></Tooltip>
+              </PieChart>
+            </div>
           </div>
-        </div>
-        <div className="py-4">
-          {/* <img src={career} alt=""/> */}
-        </div>
-      </div>
-    </div>   
-          </div>
+         </div>
      );
 };
 
