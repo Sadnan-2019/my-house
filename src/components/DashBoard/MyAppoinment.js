@@ -34,6 +34,74 @@ const MyAppoinment = () => {
   </div>
 </section>
 
+<div className='grid  grid-cols-3 gap-10 px-5 '>
+
+ 
+<div class="card  bg-gradient-to-r from-green-400 to-blue-500 shadow-xl  text-white mb-5 mt-12">
+      <div class="card-body">
+        
+        
+        <div class="flex items-center   ">
+          <div>
+            <div class="avatar">
+              <div class="w-24 rounded-full ring ring-primary ring-offset-base-100  mr-5">
+                <img src= "https://placeimg.com/192/192/people" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="mr-5 ">
+          <h2 class="card-title">Clints</h2>
+            <h2> 78</h2>
+             
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card  bg-gradient-to-r from-green-400 to-blue-500 shadow-xl  text-white mb-5 mt-12">
+      <div class="card-body">
+        
+        
+        <div class="flex items-center   ">
+          <div>
+            <div class="avatar">
+              <div class="w-24 rounded-full ring ring-primary ring-offset-base-100  mr-5">
+                <img src= "https://placeimg.com/192/192/people" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="mr-5 ">
+          <h2 class="card-title">Sales</h2>
+            <h2> 78</h2>
+             
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card  bg-gradient-to-r from-green-400 to-blue-500 shadow-xl  text-white mb-5 mt-12">
+      <div class="card-body">
+        
+        
+        <div class="flex items-center   ">
+          <div>
+            <div class="avatar">
+              <div class="w-24 rounded-full ring ring-primary ring-offset-base-100  mr-5">
+                <img src= "https://placeimg.com/192/192/people" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="mr-5 ">
+          <h2 class="card-title">Percentage</h2>
+            <h2 className='font-bold text-xl'> 78%</h2>
+             
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
 
       <h1 className="text-center my-instrument py-4 text-white">My Chart</h1>
       <div className="flex justify-center items-center   ">
