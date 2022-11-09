@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './components/Login/Login';
 import DashBoard from './components/DashBoard/DashBoard';
 import MyAppoinment from './components/DashBoard/MyAppoinment';
+import LandLord from './components/LandLord/LandLord';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
           }
         >
           <Route index element={<MyAppoinment></MyAppoinment>} />
-          <Route path="review" element={<MyAppoinment></MyAppoinment>} />
+          <Route path="landlord" element={<LandLord/>} />
           {/* <Route path="review" element={<MyReview></MyReview>} />
           <Route path="payment/:id" element={<Payment/>} />
           <Route path="mobile-payment/:id" element={<MobileBanking/>} />

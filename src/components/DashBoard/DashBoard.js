@@ -4,7 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 const DashBoard = () => {
   return (
     <div>
-      <div class="drawer drawer-mobile  bg-gradient-to-r from-[#303640] to-[#103264] shadow-2xl rounded-3xl p-4">
+      <div class="drawer drawer-mobile   ">
         <input id="my-drawer" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content  ">
           <h3 className="text-2xl font-bold  text-white">
@@ -12,20 +12,15 @@ const DashBoard = () => {
           </h3>
           <Outlet></Outlet>
         </div>
-        <div class="drawer-side rounded-2xl ">
+        <div class="drawer-side  ">
           <label for="my-drawer" class="drawer-overlay"></label>
-          <ul class="menu text-white p-4  overflow-y-auto w-80 bg-gradient-to-r from-[rgb(17,57,124)] to-[#a5b7d3]  ">
+          <ul class="menu text-white p-4  overflow-y-auto w-80 bg-black ">
             <li class="active">
-              <a href="index.html">
-                <span class="icon">
-                  <i class="mdi mdi-desktop-mac"></i>
-                </span>
-                <span class="menu-item-label">Dashboard</span>
-              </a>
+            <Link to="/dashboard">Dashboard</Link>
             </li>
 
             <li className="mb-2">
-              <Link to="/dashboard">My Appoinment</Link>
+              <Link to="/dashboard/landlord">Add Landlord</Link>
             </li>
             <li>
               <Link to="/dashboard/review">My review</Link>
