@@ -1,6 +1,5 @@
 import React from "react";
 import { Input } from "@material-tailwind/react";
-import { useNavigate, useOutletContext, useParams } from "react-router-dom";
 
 const AddLandLord = () => {
   let number = 2;
@@ -16,15 +15,13 @@ const AddLandLord = () => {
       "input-bordered",
       "w-full",
       "mb-4",
+      "mt-4",
       "h-14",
-      "skills"
-
-      
-      
+      "Address"
     );
     newNode.setAttribute("type", "text");
-    newNode.setAttribute("placeholder", "Skills");
-    newNode.setAttribute("name", `skills_${number}`);
+    newNode.setAttribute("placeholder", "Address");
+    newNode.setAttribute("name", `Address${number}`);
 
     let parentFrom = document.getElementById("skillsId");
     parentFrom.appendChild(newNode);
@@ -171,14 +168,11 @@ const AddLandLord = () => {
             </p>
             <div className="flex  ">
               <form id="skillsId" className="mt-12 w-[100%] md:w-[80%]">
-               
                 <div className="flex items-center justify-items-center gap-5">
                   <Input variant="static" placeholder="Name" />
                   <Input variant="static" placeholder="Relation  " />
-                 
                 </div>
                 <div className="flex items-center justify-items-center gap-5">
-                  
                   <Input variant="static" placeholder="Address" />
                   <Input variant="static" placeholder="Mobile No  " />
                 </div>
@@ -186,9 +180,9 @@ const AddLandLord = () => {
             </div>
             <div
               onClick={addNewSkills}
-              className="flex justify-center items-center text-accent hover:text-primary cursor-pointer  py-2"
+              className="flex justify-center items-center text-accent   py-2"
             >
-              <p className="text-lg btn"> Add Another One</p>
+              <p className="text-lg   "> Add Another One</p>
             </div>
           </div>
         </div>
