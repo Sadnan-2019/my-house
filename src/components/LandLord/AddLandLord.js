@@ -64,7 +64,7 @@ const AddLandLord = () => {
         </div>
       </div>
       <div id="rentperson">
-        <div className="grid lg:grid-cols-3 justify-items-center py-5">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-3 justify-items-center py-5">
           <div
             className="      w-5/6 flex items-center justify-center border-2	 gap-5  border-black    shadow-lg shadow-white-1000/50   p-10"
             style={{
