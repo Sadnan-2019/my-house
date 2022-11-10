@@ -132,6 +132,7 @@ const AddLandLord = () => {
             <div className="    ">
               <Input variant="static" placeholder="Owner of home" />
               <Input variant="static" placeholder="Fathers name" />
+              <Input variant="static" placeholder="Mothers name" />
               <div className="flex items-center justify-items-center gap-5">
                 <Input variant="static" placeholder="Date of Birth" />
                 <Input variant="static" placeholder="Mariteal Status" />
@@ -166,23 +167,49 @@ const AddLandLord = () => {
             <p className="text-lg text-left mt-5 font-bold">
               Family/Roomate Details
             </p>
-            <div className="flex  ">
-              <form id="skillsId" className="mt-12 w-[100%] md:w-[80%]">
+            <div className=" ">
+              <form id="skillsId" className="mt-12  ">
                 <div className="flex items-center justify-items-center gap-5">
                   <Input variant="static" placeholder="Name" />
-                  <Input variant="static" placeholder="Relation  " />
-                </div>
-                <div className="flex items-center justify-items-center gap-5">
-                  <Input variant="static" placeholder="Address" />
+                  <Input variant="static" placeholder="Occupation  " />
+                  <Input variant="static" placeholder="Age" />
                   <Input variant="static" placeholder="Mobile No  " />
                 </div>
               </form>
             </div>
             <div
               onClick={addNewSkills}
-              className="flex justify-center items-center text-accent   py-2"
+              className=" text-end text-red-500    py-2"
             >
-              <p className="text-lg   "> Add Another One</p>
+              <p className="text-2xl   "> Add Another One</p>
+            </div>
+            <div className="flex items-center justify-items-center gap-5">
+              <Input variant="static" placeholder="Home Servent Name" />
+              <Input variant="static" placeholder="NID" />
+              <Input variant="static" placeholder="Mobile No" />
+              <Input variant="static" placeholder="Permanent Address" />
+            </div>
+            <div className="flex items-center justify-items-center gap-5">
+              <Input variant="static" placeholder="Driver Name" />
+              <Input variant="static" placeholder="NID" />
+              <Input variant="static" placeholder="Mobile No" />
+              <Input variant="static" placeholder="Permanent Address" />
+            </div>
+            <div className="flex items-center justify-items-center gap-5">
+              <Input variant="static" placeholder="Previous HomeLand Name" />
+              <Input variant="static" placeholder="Mobile No" />
+            </div>
+            <Input variant="static" placeholder="  Address" />
+            <Input variant="static" placeholder="  Reason of Leave Previous House" />
+            
+            <div className="flex items-center justify-items-center gap-5">
+            <Input variant="static" placeholder="  Present HomeLand Name " />
+              <Input variant="static" placeholder="Mobile No" />
+            </div>
+            <Input variant="static" placeholder="Present House Start Living Date" />
+            <div className="flex items-center justify-items-center   gap-5">
+            <Input variant="static" placeholder="  Date "   />
+              <Input variant="static" placeholder="Signature of Rent Person" />
             </div>
           </div>
         </div>
