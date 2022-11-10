@@ -68,12 +68,12 @@ const liItems = (
        <li>
          <Link to="/">Home</Link>
        </li>
-       <li>
+       {/* <li>
          <Link to="/appoinment">Appoinment</Link>
-       </li>
+       </li> */}
  
        <li>
-         <Link to="">Reviwes</Link>
+         <Link to="/review">Reviwes</Link>
        </li>
        <li>
          <Link to="/about">About</Link>
@@ -162,7 +162,7 @@ const liItems = (
             {liItems }
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl"> MY HOUSE CLINIC</a>
+        <a className="btn btn-ghost normal-case text-xl"> MY HOUSE</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{liItems}</ul>
@@ -185,7 +185,7 @@ const liItems = (
               />
             </svg>
           </label>
-      {/* <span  class=" ">{user?.email}</span> */}
+      <span  class=" btn ">Logout</span>
 
       </div>
     </div>

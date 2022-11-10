@@ -15,25 +15,30 @@ const DashBoard = () => {
         <div class="drawer-side  ">
           <label for="my-drawer" class="drawer-overlay"></label>
           <ul class="menu text-white p-4  overflow-y-auto w-80 bg-black ">
-            <li class="active">
-            <Link to="/dashboard">Dashboard</Link>
-            </li>
-
-            <li className="mb-2">
-              <Link to="/dashboard/landlord">Add Landlord</Link>
-            </li>
+            <div className="flex justify-items-center items-center">
+              <img alt=""
+                className="w-4"
+                src="https://cdn-icons-png.flaticon.com/128/2893/2893521.png"
+              />
+              <li class=" ">
+                <Link to="/dashboard">Dashboard</Link>
+              </li>
+            </div>
+            <div className="flex justify-items-center items-center">
+              <img alt=""
+                className="w-4"
+                src="https://cdn-icons-png.flaticon.com/512/863/863823.png"
+              />
+              <li className="mb-2">
+                <Link to="/dashboard/landlord">Add Landlord</Link>
+              </li>
+            </div>
             <li>
               <Link to="/dashboard/review">My review</Link>
             </li>
 
             <li>
               <Link to="/dashboard/users">All Users</Link>
-            </li>
-            <li>
-              <Link to="/dashboard/addDoctor">Add a Doctor</Link>
-            </li>
-            <li>
-              <Link to="/dashboard/manageDoctor">Manage Doctors</Link>
             </li>
           </ul>
         </div>

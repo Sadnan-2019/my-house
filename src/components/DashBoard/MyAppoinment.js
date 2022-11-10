@@ -33,7 +33,7 @@ const MyAppoinment = () => {
     </a>
   </div>
 </section>
-<h1 className="text-center my-instrument py-4 font-bold text-xl text-black">My Chart</h1>
+{/* <h1 className="text-center my-instrument py-4 font-bold text-xl text-black">My Chart</h1> */}
 <div className='grid sm:grid-sm-1 lg:grid-cols-3 gap-10 px-5 '>
 
  
