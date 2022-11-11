@@ -12,7 +12,7 @@ const AddLandLord = () => {
     let newNode = document.createElement("input");
     newNode.classList.add(
       "input",
-      "input-bordered",
+
       "w-full",
       "mb-4",
       "mt-4",
@@ -26,23 +26,6 @@ const AddLandLord = () => {
     let parentFrom = document.getElementById("skillsId");
     parentFrom.appendChild(newNode);
   }
-
-  // Get input field values and store
-  //     let str = {
-  //             name: "Skills",
-  //             value: []
-  //     };// store input values
-  //     const getValue = () => {
-  //         str.value = [];
-  //         const skills = document.getElementsByClassName("skills");
-  //         for (let e of skills) {
-  //             str.value.push(e.value);
-  //         }
-
-  //         setUsersTemplateInfo({...usersTemplateInfo, skills:str})
-  //         navigate(`/resume-builder/${_id}/add-projects`)
-  //         console.log(usersTemplateInfo);
-  //     }
 
   return (
     <div>
@@ -200,15 +183,21 @@ const AddLandLord = () => {
               <Input variant="static" placeholder="Mobile No" />
             </div>
             <Input variant="static" placeholder="  Address" />
-            <Input variant="static" placeholder="  Reason of Leave Previous House" />
-            
+            <Input
+              variant="static"
+              placeholder="  Reason of Leave Previous House"
+            />
+
             <div className="flex items-center justify-items-center gap-5">
-            <Input variant="static" placeholder="  Present HomeLand Name " />
+              <Input variant="static" placeholder="  Present HomeLand Name " />
               <Input variant="static" placeholder="Mobile No" />
             </div>
-            <Input variant="static" placeholder="Present House Start Living Date" />
+            <Input
+              variant="static"
+              placeholder="Present House Start Living Date"
+            />
             <div className="flex items-center justify-items-center   gap-5">
-            <Input variant="static" placeholder="  Date "   />
+              <Input variant="static" placeholder="  Date " />
               <Input variant="static" placeholder="Signature of Rent Person" />
             </div>
           </div>

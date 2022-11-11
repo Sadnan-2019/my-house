@@ -136,7 +136,7 @@ const liItems = (
      //    </div> */}
      //  </div> 
      //    </div>
-     <div className="navbar bg-base-100 ">
+     <div className="navbar shadow-lg " >
       <div className="navbar-start">
         <div className="dropdown">
           <label tabindex="0" className="btn btn-ghost lg:hidden">

@@ -3,18 +3,16 @@ import { Link, Outlet } from "react-router-dom";
 
 const DashBoard = () => {
   return (
-    <div>
+    <div className="bg-[#F5F7FF] ">
       <div class="drawer drawer-mobile   ">
         <input id="my-drawer" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content  ">
-          <h3 className="text-2xl font-bold  text-white">
-            Welcome to Dashboard
-          </h3>
+           
           <Outlet></Outlet>
         </div>
         <div class="drawer-side  ">
           <label for="my-drawer" class="drawer-overlay"></label>
-          <ul class="menu text-white p-4  overflow-y-auto w-80 bg-black ">
+          <ul class="menu text-black shadow-lg p-4  overflow-y-auto w-60 bg-white  ">
             <div className="flex justify-items-center items-center">
               <img alt=""
                 className="w-4"

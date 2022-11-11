@@ -9,7 +9,7 @@ import LandLord from './components/LandLord/LandLord';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"  >
        <Navbar></Navbar>
        
         
