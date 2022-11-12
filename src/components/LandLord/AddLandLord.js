@@ -61,7 +61,8 @@ const AddLandLord = () => {
            
         </div>
       </div>
-      <div id="rentperson">
+      <div id=" ">
+        <form method="POST">
         <div className="grid sm:grid-cols-1 lg:grid-cols-3 justify-items-center py-5">
           <div
             className="      w-5/6 flex items-center justify-center border-2	 gap-5  border-black    shadow-lg shadow-white-1000/50   p-10"
@@ -268,7 +269,18 @@ const AddLandLord = () => {
               <Input variant="static" placeholder="Signature of Rent Person" />
             </div>
           </div>
+          <div className="flex justify-end px-2 py-2">
+                  <button
+                    className=" btn btn-xs   "
+                    type="button"
+                     
+                  >
+                    Save & Continue
+                  </button>
+                </div>
         </div>
+      
+        </form>
       </div>
     </div>
   );
