@@ -44,20 +44,21 @@ const AddLandLord = () => {
          </div>
          
           
-          <div className="py-2">
+          <div className="py-2 gap-5">
           <Radio id="green" name="color" color="green" label="Land Lord"  onClick={() => setVisble(false)}/>
           <Radio id="green" name="color" color="green" label="Rent Person" onClick={() => setVisble(true)}/>
           </div>
-
+     
           
           {visible &&
-           <div>
+           <div className="gap-2">
            <Radio   name="color" color="green" label="Family Tenant"   />
            <Radio  name="color" color="green" label="Bachelor Tenant"  />
            <Radio   name="color" color="green" label="Sublet"  />
            </div>
            
            }
+           
         </div>
       </div>
       <div id="rentperson">
