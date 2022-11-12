@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import { Input } from "@material-tailwind/react";
+import { Input, Radio } from "@material-tailwind/react";
 
 const AddLandLord = () => {
-   
- 
+  const [visible, setVisble] = useState(false);
+  const [formValues, setFormValues] = useState([
+    { fname: "", occupation: "", age: "", mobile: "" },
+  ]);
 
-  const [formValues, setFormValues] = useState([{ fname: "", occupation: "" ,age:"",mobile:""}]);
+  // const showReantDetails = () => {
+  //    console.log("heloo")
 
+  // };
   let handleChange = (i, e) => {
     let newFormValues = [...formValues];
     newFormValues[i][e.target.name] = e.target.value;
@@ -31,20 +35,29 @@ const AddLandLord = () => {
   return (
     <div>
       <div className="grid grid-cols-1 justify-items-center items-center py-10">
-        <div className="form-control w-full max-w-lg">
-          <label className="label">
-            <span className="label-text font-bold text-1xl">
-              Chose Who you are
-            </span>
-          </label>
-          <select className="select select-bordered">
-            <option id="landlord"> Land Lord</option>
-            <option>
-              <a class="nav-link" href="#rentperson">
-                Rent Person
-              </a>
-            </option>
-          </select>
+        <div className=" ">
+         <div>
+          
+          <p className="text-2xl font-bold py-2">  Chose Who you are</p>
+            
+           
+         </div>
+         
+          
+          <div className="py-2">
+          <Radio id="green" name="color" color="green" label="Land Lord"  onClick={() => setVisble(false)}/>
+          <Radio id="green" name="color" color="green" label="Rent Person" onClick={() => setVisble(true)}/>
+          </div>
+
+          
+          {visible &&
+           <div>
+           <Radio   name="color" color="green" label="Family Tenant"   />
+           <Radio  name="color" color="green" label="Bachelor Tenant"  />
+           <Radio   name="color" color="green" label="Sublet"  />
+           </div>
+           
+           }
         </div>
       </div>
       <div id="rentperson">
@@ -152,32 +165,40 @@ const AddLandLord = () => {
               Family/Roomate Details
             </p>
             <div className=" ">
-             
               <form onSubmit={handleSubmit}>
                 {formValues.map((element, index) => (
-                  <div className="flex items-center justify-items-center gap-2"  key={index}>
-                     
-                    <Input variant="static" placeholder="Family Member Name"
-                    
+                  <div
+                    className="flex items-center justify-items-center gap-2"
+                    key={index}
+                  >
+                    <Input
+                      variant="static"
+                      placeholder="Family Member Name"
                       type="text"
                       name="fname"
                       value={element.fname || ""}
                       onChange={(e) => handleChange(index, e)}
                     />
-                    
-                    <Input variant="static" placeholder="Occupation"
+
+                    <Input
+                      variant="static"
+                      placeholder="Occupation"
                       type="text"
                       name="occupation"
                       value={element.occupation || ""}
                       onChange={(e) => handleChange(index, e)}
                     />
-                    <Input variant="static" placeholder="Age"
+                    <Input
+                      variant="static"
+                      placeholder="Age"
                       type="text"
                       name="age"
                       value={element.age || ""}
                       onChange={(e) => handleChange(index, e)}
                     />
-                    <Input variant="static" placeholder="Mobile No"
+                    <Input
+                      variant="static"
+                      placeholder="Mobile No"
                       type="text"
                       name="mobile"
                       value={element.mobile || ""}
@@ -196,13 +217,12 @@ const AddLandLord = () => {
                 ))}
                 <div className="flex justify-end py-2">
                   <button
-                    className= " btn btn-xs   "
+                    className=" btn btn-xs   "
                     type="button"
                     onClick={() => addFormFields()}
                   >
                     Add Another One
                   </button>
-                   
                 </div>
               </form>
             </div>
