@@ -1,31 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "@material-tailwind/react";
 
 const AddLandLord = () => {
-  let number = 2;
-  //     const [usersTemplateInfo, setUsersTemplateInfo] = useOutletContext();
-  //     const navigate = useNavigate();
-  //     const { _id } = useParams();
+   
+ 
 
-  function addNewSkills() {
-    number++;
-    let newNode = document.createElement("input");
-    newNode.classList.add(
-      "input",
+  const [formValues, setFormValues] = useState([{ fname: "", occupation: "" ,age:"",mobile:""}]);
 
-      "w-full",
-      "mb-4",
-      "mt-4",
-      "h-14",
-      "Address"
-    );
-    newNode.setAttribute("type", "text");
-    newNode.setAttribute("placeholder", "Address");
-    newNode.setAttribute("name", `Address${number}`);
+  let handleChange = (i, e) => {
+    let newFormValues = [...formValues];
+    newFormValues[i][e.target.name] = e.target.value;
+    setFormValues(newFormValues);
+  };
 
-    let parentFrom = document.getElementById("skillsId");
-    parentFrom.appendChild(newNode);
-  }
+  let addFormFields = () => {
+    setFormValues([...formValues, { name: "", email: "" }]);
+  };
+
+  let removeFormFields = (i) => {
+    let newFormValues = [...formValues];
+    newFormValues.splice(i, 1);
+    setFormValues(newFormValues);
+  };
+
+  let handleSubmit = (event) => {
+    event.preventDefault();
+    alert(JSON.stringify(formValues));
+  };
 
   return (
     <div>
@@ -151,21 +152,66 @@ const AddLandLord = () => {
               Family/Roomate Details
             </p>
             <div className=" ">
-              <form id="skillsId" className="mt-12  ">
-                <div className="flex items-center justify-items-center gap-5">
-                  <Input variant="static" placeholder="Name" />
-                  <Input variant="static" placeholder="Occupation  " />
-                  <Input variant="static" placeholder="Age" />
-                  <Input variant="static" placeholder="Mobile No  " />
+             
+              <form onSubmit={handleSubmit}>
+                {formValues.map((element, index) => (
+                  <div className="flex items-center justify-items-center gap-2"  key={index}>
+                     
+                    <Input variant="static" placeholder="Family Member Name"
+                    
+                      type="text"
+                      name="fname"
+                      value={element.fname || ""}
+                      onChange={(e) => handleChange(index, e)}
+                    />
+                    
+                    <Input variant="static" placeholder="Occupation"
+                      type="text"
+                      name="occupation"
+                      value={element.occupation || ""}
+                      onChange={(e) => handleChange(index, e)}
+                    />
+                    <Input variant="static" placeholder="Age"
+                      type="text"
+                      name="age"
+                      value={element.age || ""}
+                      onChange={(e) => handleChange(index, e)}
+                    />
+                    <Input variant="static" placeholder="Mobile No"
+                      type="text"
+                      name="mobile"
+                      value={element.mobile || ""}
+                      onChange={(e) => handleChange(index, e)}
+                    />
+                    {index ? (
+                      <button
+                        type="button"
+                        className="btn btn-xs "
+                        onClick={() => removeFormFields(index)}
+                      >
+                        Remove
+                      </button>
+                    ) : null}
+                  </div>
+                ))}
+                <div className="flex justify-end py-2">
+                  <button
+                    className= " btn btn-xs   "
+                    type="button"
+                    onClick={() => addFormFields()}
+                  >
+                    Add Another One
+                  </button>
+                   
                 </div>
               </form>
             </div>
-            <div
+            {/* <div
               onClick={addNewSkills}
               className=" text-end text-red-500    py-2"
             >
               <p className="text-2xl   "> Add Another One</p>
-            </div>
+            </div> */}
             <div className="flex items-center justify-items-center gap-5">
               <Input variant="static" placeholder="Home Servent Name" />
               <Input variant="static" placeholder="NID" />

@@ -27,7 +27,7 @@ const DashBoard = () => {
                 className="w-4"
                 src="https://cdn-icons-png.flaticon.com/512/863/863823.png"
               />
-              <li className="mb-2">
+              <li className=" ">
                 <Link to="/dashboard/landlord">Add Landlord</Link>
               </li>
             </div>
@@ -40,6 +40,7 @@ const DashBoard = () => {
             </li>
           </ul>
         </div>
+       
       </div>
     </div>
   );
