@@ -185,7 +185,14 @@ const liItems = (
               />
             </svg>
           </label>
-      <span  class=" btn ">Logout</span>
+   
+      <div className="dropdown dropdown-hover">
+  <label tabIndex={0} className="btn m-1">My Profile</label>
+  <ul tabIndex={0} className="dropdown-content menu p-2  bg-base-100 rounded-box w-22">
+    <li><a>Settings</a></li>
+    <li><a>Logout</a></li>
+  </ul>
+</div>
 
       </div>
     </div>
